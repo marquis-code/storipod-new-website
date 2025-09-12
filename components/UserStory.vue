@@ -1,37 +1,36 @@
 <template>
-  <section class="py-16 md:py-24 px-4 bg-black relative overflow-hidden">
-    <!-- Animated Background -->
+  <section class="py-16 md:py-24 px-4 bg-white relative overflow-hidden">
+    <!-- Subtle Background Elements -->
     <div class="absolute inset-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-black to-cyan-900/20"></div>
-      <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-      <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(14,165,233,0.1),transparent_50%)] animate-pulse"></div>
+      <div class="absolute top-20 left-10 w-32 h-32 bg-blue-50 rounded-full blur-2xl opacity-30"></div>
+      <div class="absolute bottom-20 right-10 w-40 h-40 bg-gray-50 rounded-full blur-3xl opacity-40"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-25/20 to-gray-25/20 rounded-full blur-3xl opacity-20"></div>
     </div>
 
     <div class="max-w-7xl mx-auto relative z-10">
       <!-- Header -->
       <div class="text-center mb-16 md:mb-20">
         <div class="inline-block mb-6">
-          <h2 class="text-2xl md:text-4xl font-black bg-gradient-to-r from-cyan-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent animate-gradient-x">
+          <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             Success Stories
           </h2>
-          <div class="h-1 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full mt-4 animate-pulse"></div>
+          <div class="h-1 w-24 bg-blue-600 rounded-full mx-auto"></div>
         </div>
-        <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
           Real results from real partnerships. See how we've transformed businesses across industries.
         </p>
       </div>
 
       <!-- Industry Filter -->
-      <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <div class="flex flex-wrap justify-center gap-3 mb-12">
         <button
           v-for="industry in industries"
           :key="industry"
           @click="handleIndustryChange(industry)"
-          class="px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105"
+          class="px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
           :class="activeIndustry === industry
-            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white shadow-2xl shadow-purple-500/25 animate-pulse'
-            : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 hover:text-white border border-slate-600/50 hover:border-purple-400/50'"
+            ? 'bg-blue-600 text-white shadow-lg shadow-blue-600/25'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200 hover:shadow-md border border-gray-200'"
         >
           {{ industry }}
         </button>
@@ -44,7 +43,7 @@
         @mouseleave="resumeAutoPlay"
       >
         <!-- Main Carousel -->
-        <div class="overflow-hidden rounded-3xl">
+        <div class="overflow-hidden rounded-2xl">
           <div 
             ref="carouselRef"
             class="flex transition-transform duration-700 ease-out"
@@ -55,26 +54,26 @@
               :key="study.id" 
               class="w-full flex-shrink-0 px-4"
             >
-              <div class="max-w-4xl mx-auto">
-                <div class="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-xl rounded-3xl p-8 md:p-12 border border-slate-700/50 shadow-2xl relative overflow-hidden group">
+              <div class="max-w-5xl mx-auto">
+                <div class="bg-white rounded-2xl p-8 md:p-12 border border-gray-200 shadow-xl relative overflow-hidden group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
                   
-                  <!-- Animated Border Glow -->
-                  <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                  <!-- Subtle Hover Accent -->
+                  <div class="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-gray-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
                   
                   <!-- Content -->
                   <div class="relative z-10">
                     <!-- Header -->
                     <div class="flex items-center justify-between mb-8">
-                      <div :class="`inline-flex items-center gap-3 bg-black text-white px-6 py-3 rounded-2xl font-bold shadow-lg`">
+                      <div class="inline-flex items-center gap-3 bg-gray-900 text-white px-6 py-3 rounded-xl font-medium shadow-lg">
                         <component :is="study.iconName" :size="20" />
                         {{ study.industry }}
                       </div>
-                      <div class="w-16 h-16 bg-gradient-to-br from-slate-700 to-slate-800 rounded-2xl flex items-center justify-center">
-                        <component :is="study.iconName" :size="32" class="text-cyan-400" />
+                      <div class="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center group-hover:bg-blue-50 transition-colors duration-300">
+                        <component :is="study.iconName" :size="32" class="text-gray-700 group-hover:text-blue-600 transition-colors duration-300" />
                       </div>
                     </div>
                     
-                    <h3 class="text-2xl md:text-4xl font-black text-white mb-8 leading-tight">
+                    <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mb-8 leading-tight">
                       {{ study.client }}
                     </h3>
                     
@@ -83,22 +82,22 @@
                       <div class="space-y-6">
                         <!-- Challenge -->
                         <div class="group/item">
-                          <h4 class="text-xl font-bold text-red-400 mb-3 flex items-center gap-2">
-                            <div class="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                          <h4 class="text-xl font-semibold text-red-600 mb-3 flex items-center gap-2">
+                            <div class="w-2 h-2 bg-red-600 rounded-full animate-pulse"></div>
                             Challenge
                           </h4>
-                          <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
                             {{ study.challenge }}
                           </p>
                         </div>
                         
                         <!-- Solution -->
                         <div class="group/item">
-                          <h4 class="text-xl font-bold text-purple-400 mb-3 flex items-center gap-2">
-                            <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                          <h4 class="text-xl font-semibold text-blue-600 mb-3 flex items-center gap-2">
+                            <div class="w-2 h-2 bg-blue-600 rounded-full animate-pulse"></div>
                             Solution
                           </h4>
-                          <p class="text-gray-300 leading-relaxed text-sm md:text-base">
+                          <p class="text-gray-700 leading-relaxed text-sm md:text-base">
                             {{ study.solution }}
                           </p>
                         </div>
@@ -107,11 +106,11 @@
                       <div>
                         <!-- Results -->
                         <div class="group/item mb-6">
-                          <h4 class="text-xl font-bold text-emerald-400 mb-3 flex items-center gap-2">
-                            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                          <h4 class="text-xl font-semibold text-green-600 mb-3 flex items-center gap-2">
+                            <div class="w-2 h-2 bg-green-600 rounded-full animate-pulse"></div>
                             Results
                           </h4>
-                          <p class="text-gray-300 leading-relaxed text-sm md:text-base mb-6">
+                          <p class="text-gray-700 leading-relaxed text-sm md:text-base mb-6">
                             {{ study.result }}
                           </p>
                         </div>
@@ -121,27 +120,28 @@
                           <div 
                             v-for="(stat, statIndex) in study.stats" 
                             :key="statIndex" 
-                            class="relative"
+                            class="relative transform hover:scale-105 transition-transform duration-300"
                           >
-                            <div class="bg-gradient-to-br from-black/40 to-slate-900/40 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/30 text-center group-hover:border-cyan-400/30 transition-all duration-300">
-                              <div :class="`text-3xl md:text-4xl font-black mb-2 bg-gradient-to-r ${study.color} bg-clip-text text-transparent`">
+                            <div class="bg-gradient-to-br from-gray-50 to-white backdrop-blur-sm rounded-xl p-6 border border-gray-200 text-center group-hover:border-blue-200 transition-all duration-300 shadow-md hover:shadow-lg">
+                              <div class="text-3xl md:text-4xl font-bold mb-2 text-gray-900 counter-animation">
                                 {{ animatedStats[`${study.id}-${statIndex}`] || 0 }}{{ stat.suffix }}
                               </div>
-                              <div class="text-xs text-gray-400 font-medium">
+                              <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">
                                 {{ stat.label }}
                               </div>
                             </div>
-                            <!-- Floating Animation -->
-                            <div :class="`absolute -top-2 -right-2 w-6 h-6 bg-gradient-to-r ${study.color} rounded-full animate-bounce opacity-80`"></div>
+                            <!-- Subtle Success Indicator -->
+                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full opacity-80 animate-ping"></div>
+                            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full"></div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <!-- Decorative Elements -->
-                  <div class="absolute top-4 right-4 w-20 h-20 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-2xl"></div>
-                  <div class="absolute bottom-4 left-4 w-16 h-16 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-full blur-2xl"></div>
+                  <!-- Decorative Corner Elements -->
+                  <div class="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-2xl"></div>
+                  <div class="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-gray-100/30 to-transparent rounded-2xl"></div>
                 </div>
               </div>
             </div>
@@ -151,44 +151,41 @@
         <!-- Navigation Arrows -->
         <button
           @click="prevSlide"
-          class="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-gradient-to-r from-slate-800 to-slate-700 rounded-full flex items-center justify-center text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl border border-slate-600/50 hover:border-purple-400/50 z-20 group"
+          class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-blue-600 transition-all duration-300 shadow-lg border border-gray-200 hover:border-blue-300 z-20 group hover:scale-110"
         >
-          <ChevronLeftIcon :size="24" class="group-hover:scale-110 transition-transform" />
+          <ChevronLeftIcon :size="20" class="group-hover:scale-110 transition-transform" />
         </button>
         
         <button
           @click="nextSlide"
-          class="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-gradient-to-r from-slate-800 to-slate-700 rounded-full flex items-center justify-center text-white hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 shadow-2xl border border-slate-600/50 hover:border-purple-400/50 z-20 group"
+          class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-blue-600 transition-all duration-300 shadow-lg border border-gray-200 hover:border-blue-300 z-20 group hover:scale-110"
         >
-          <ChevronRightIcon :size="24" class="group-hover:scale-110 transition-transform" />
+          <ChevronRightIcon :size="20" class="group-hover:scale-110 transition-transform" />
         </button>
       </div>
 
       <!-- Slide Indicators -->
-      <div class="flex justify-center gap-3 mt-8">
+      <div class="flex justify-center gap-2 mt-8">
         <button
           v-for="(_, index) in filteredCaseStudies"
           :key="index"
           @click="goToSlide(index)"
-          class="w-3 h-3 rounded-full transition-all duration-300"
+          class="w-3 h-3 rounded-full transition-all duration-300 hover:scale-125"
           :class="currentSlide === index
-            ? 'bg-gradient-to-r from-cyan-500 to-purple-500 scale-125 shadow-lg shadow-purple-500/50'
-            : 'bg-slate-600 hover:bg-slate-500'"
+            ? 'bg-blue-600 scale-125'
+            : 'bg-gray-300 hover:bg-gray-400'"
         />
       </div>
 
-      <!-- Auto-play Indicator -->
-      <!-- <div class="flex justify-center mt-4">
-        <button
-          @click="toggleAutoPlay"
-          class="text-sm px-4 py-2 rounded-full transition-all duration-300"
-          :class="isAutoPlaying 
-            ? 'text-emerald-400 bg-emerald-400/10 border border-emerald-400/30' 
-            : 'text-gray-500 bg-slate-800/50 border border-slate-600/50'"
-        >
-          {{ isAutoPlaying ? '⏸️ Auto-playing' : '▶️ Paused' }}
-        </button>
-      </div> -->
+      <!-- Progress Bar -->
+      <div class="max-w-sm mx-auto mt-6">
+        <div class="w-full bg-gray-200 rounded-full h-1">
+          <div 
+            class="bg-blue-600 h-1 rounded-full transition-all duration-300"
+            :style="{ width: `${((currentSlide + 1) / filteredCaseStudies.length) * 100}%` }"
+          ></div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -210,7 +207,6 @@ interface CaseStudy {
   solution: string
   result: string
   stats: CaseStudyStat[]
-  color: string
   iconName: string
 }
 
@@ -239,7 +235,6 @@ const caseStudies: CaseStudy[] = [
       { label: 'Revenue Increase', value: 45, suffix: '%' },
       { label: 'New Markets', value: 8, suffix: '' }
     ],
-    color: 'from-white to-gray-300',
     iconName: 'TrendingUp'
   },
   {
@@ -253,7 +248,6 @@ const caseStudies: CaseStudy[] = [
       { label: 'Media Features', value: 5, suffix: '+' },
       { label: 'VC Meetings', value: 3, suffix: '' }
     ],
-    color: 'from-white to-gray-300',
     iconName: 'Star'
   },
   {
@@ -267,7 +261,6 @@ const caseStudies: CaseStudy[] = [
       { label: 'Turnover Reduction', value: 30, suffix: '%' },
       { label: 'Cost Savings', value: 22, suffix: '%' }
     ],
-    color: 'from-white to-gray-300',
     iconName: 'Users'
   },
   {
@@ -281,7 +274,6 @@ const caseStudies: CaseStudy[] = [
       { label: 'Lead Increase', value: 180, suffix: '%' },
       { label: 'Conversion Boost', value: 67, suffix: '%' }
     ],
-    color: 'from-white to-gray-300',
     iconName: 'Award'
   },
   {
@@ -295,7 +287,6 @@ const caseStudies: CaseStudy[] = [
       { label: 'Satisfaction Up', value: 85, suffix: '%' },
       { label: 'Turnover Down', value: 60, suffix: '%' }
     ],
-    color: 'from-white to-gray-300',
     iconName: 'Users'
   }
 ]
@@ -330,7 +321,7 @@ const startAutoPlay = () => {
   if (autoPlayInterval) clearInterval(autoPlayInterval)
   autoPlayInterval = setInterval(() => {
     nextSlide()
-  }, 4000)
+  }, 5000) // Slightly longer interval for better readability
 }
 
 const stopAutoPlay = () => {
@@ -370,7 +361,7 @@ const animateStats = (study: CaseStudy) => {
   setTimeout(() => {
     study.stats.forEach((stat, index) => {
       let current = 0
-      const increment = stat.value / 50
+      const increment = stat.value / 60 // Smoother animation
       const timer = setInterval(() => {
         current += increment
         if (current >= stat.value) {
@@ -378,9 +369,9 @@ const animateStats = (study: CaseStudy) => {
           clearInterval(timer)
         }
         animatedStats.value[`${study.id}-${index}`] = Math.floor(current)
-      }, 30)
+      }, 25) // Faster updates for smoother animation
     })
-  }, 500)
+  }, 300)
 }
 
 // Watchers
@@ -424,17 +415,47 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-@keyframes gradient-x {
-  0%, 100% { 
-    background-position: 0% 50%; 
+.counter-animation {
+  transition: all 0.3s ease-out;
+}
+
+/* Smooth hover animations */
+.group:hover .counter-animation {
+  transform: scale(1.05);
+}
+
+/* Custom scrollbar for potential future use */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Subtle entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  50% { 
-    background-position: 100% 50%; 
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.animate-gradient-x {
-  background-size: 200% 200%;
-  animation: gradient-x 3s ease infinite;
+.group {
+  animation: fadeInUp 0.6s ease-out;
 }
 </style>

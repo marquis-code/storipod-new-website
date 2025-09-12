@@ -6,32 +6,32 @@ export default {
     "preload": true,
     "file": "_plugin-vue_export-helper.c27b6911.js"
   },
-  "_nuxt-link.f100f4a0.js": {
+  "_nuxt-link.7ad8cfe9.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "nuxt-link.f100f4a0.js",
+    "file": "nuxt-link.7ad8cfe9.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_useLogin.80a94a53.js": {
+  "_useLogin.b3e97f8f.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "useLogin.80a94a53.js",
+    "file": "useLogin.b3e97f8f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
   },
-  "_vue.f36acd1f.4bcbac6c.js": {
+  "_vue.f36acd1f.54a6b1c5.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "vue.f36acd1f.4bcbac6c.js",
+    "file": "vue.f36acd1f.54a6b1c5.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js"
     ]
@@ -69,7 +69,7 @@ export default {
     "module": true,
     "prefetch": true,
     "preload": true,
-    "file": "default.9835deed.js",
+    "file": "default.3bae41fa.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
       "__plugin-vue_export-helper.c27b6911.js"
@@ -92,10 +92,10 @@ export default {
     "css": [
       "error-404.7fc72018.css"
     ],
-    "file": "error-404.5458f5ee.js",
+    "file": "error-404.06541723.js",
     "imports": [
-      "_nuxt-link.f100f4a0.js",
-      "_vue.f36acd1f.4bcbac6c.js",
+      "_nuxt-link.7ad8cfe9.js",
+      "_vue.f36acd1f.54a6b1c5.js",
       "__plugin-vue_export-helper.c27b6911.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -123,9 +123,9 @@ export default {
     "css": [
       "error-500.c5df6088.css"
     ],
-    "file": "error-500.77163aaa.js",
+    "file": "error-500.6044b4a8.js",
     "imports": [
-      "_vue.f36acd1f.4bcbac6c.js",
+      "_vue.f36acd1f.54a6b1c5.js",
       "__plugin-vue_export-helper.c27b6911.js",
       "node_modules/nuxt/dist/app/entry.js"
     ],
@@ -142,7 +142,7 @@ export default {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "entry.e85ade14.css",
+    "file": "entry.5aed7dc0.css",
     "src": "node_modules/nuxt/dist/app/entry.css"
   },
   "node_modules/nuxt/dist/app/entry.js": {
@@ -151,19 +151,19 @@ export default {
     "prefetch": true,
     "preload": true,
     "css": [
-      "entry.e85ade14.css"
+      "entry.5aed7dc0.css"
     ],
     "dynamicImports": [
       "layouts/default.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-404.vue",
       "node_modules/@nuxt/ui-templates/dist/templates/error-500.vue"
     ],
-    "file": "entry.8e9af537.js",
+    "file": "entry.5d2a92dd.js",
     "isEntry": true,
     "src": "node_modules/nuxt/dist/app/entry.js"
   },
-  "entry.e85ade14.css": {
-    "file": "entry.e85ade14.css",
+  "entry.5aed7dc0.css": {
+    "file": "entry.5aed7dc0.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
@@ -183,11 +183,11 @@ export default {
     "css": [
       "_id_.c5a43801.css"
     ],
-    "file": "_id_.414a4c40.js",
+    "file": "_id_.713a3f1c.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.4bcbac6c.js",
-      "_useLogin.80a94a53.js",
+      "_vue.f36acd1f.54a6b1c5.js",
+      "_useLogin.b3e97f8f.js",
       "__plugin-vue_export-helper.c27b6911.js"
     ],
     "isDynamicEntry": true,
@@ -214,11 +214,11 @@ export default {
     "css": [
       "index.5ea7e66c.css"
     ],
-    "file": "index.11010397.js",
+    "file": "index.4551ca8f.js",
     "imports": [
       "node_modules/nuxt/dist/app/entry.js",
-      "_vue.f36acd1f.4bcbac6c.js",
-      "_useLogin.80a94a53.js",
+      "_vue.f36acd1f.54a6b1c5.js",
+      "_useLogin.b3e97f8f.js",
       "__plugin-vue_export-helper.c27b6911.js"
     ],
     "isDynamicEntry": true,
@@ -234,7 +234,7 @@ export default {
     "resourceType": "style",
     "prefetch": true,
     "preload": true,
-    "file": "index.0f17e7b4.css",
+    "file": "index.6aa6151b.css",
     "src": "pages/index.css"
   },
   "pages/index.vue": {
@@ -249,19 +249,19 @@ export default {
       "chief3.f199cb16.jpeg"
     ],
     "css": [
-      "index.0f17e7b4.css"
+      "index.6aa6151b.css"
     ],
-    "file": "index.72806dee.js",
+    "file": "index.1ae4a79a.js",
     "imports": [
-      "_nuxt-link.f100f4a0.js",
+      "_nuxt-link.7ad8cfe9.js",
       "node_modules/nuxt/dist/app/entry.js",
       "__plugin-vue_export-helper.c27b6911.js"
     ],
     "isDynamicEntry": true,
     "src": "pages/index.vue"
   },
-  "index.0f17e7b4.css": {
-    "file": "index.0f17e7b4.css",
+  "index.6aa6151b.css": {
+    "file": "index.6aa6151b.css",
     "resourceType": "style",
     "prefetch": true,
     "preload": true
