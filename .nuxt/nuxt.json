@@ -1,9 +1,9 @@
 {
-  "_hash": "g8DrdPPkio",
+  "_hash": "t4tJngrLdvYAM75mrmopl0g1hz2S0VZtwH4_KuYPh-A",
   "project": {
-    "rootDir": "/Users/marquisabah/Documents/blog-application"
+    "rootDir": "/Users/marquisabah/Documents/storipod-new-website"
   },
   "versions": {
-    "nuxt": "3.7.3"
+    "nuxt": "3.19.2"
   }
 }

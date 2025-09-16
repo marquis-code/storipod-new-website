@@ -17,11 +17,36 @@ export default defineNuxtConfig({
       failOnError: false
     }
   },
+    typescript: {
+    typeCheck: false
+  },
   plugins: [],
+   tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: 'tailwind.config',
+    exposeConfig: false,
+    viewer: true,
+  },
+    icon: {
+    serverBundle: {
+      collections: ['heroicons', 'simple-icons']
+    }
+  },
+
   build: {
     transpile: ['chart.js', 'vue-cal', 'fullcalendar'],
   },
-  modules: ['@kevinmarrec/nuxt-pwa'],
+   colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: 'light', // fallback value if not system preference found
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode'
+  },
+  modules: ['@kevinmarrec/nuxt-pwa', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-icon',],
   app: {
     head: {
       title: "Hudia - At Hudia, we specialize in helping businesses establish a strong foothold in Africa, particularly in Nigeria. Our comprehensive services ensure that you navigate the complexities of the business landscape with confidence.",
