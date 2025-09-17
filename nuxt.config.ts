@@ -46,10 +46,10 @@ export default defineNuxtConfig({
     classSuffix: '',
     storageKey: 'nuxt-color-mode'
   },
-  modules: ['@kevinmarrec/nuxt-pwa', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-icon',],
+  modules: ['@kevinmarrec/nuxt-pwa', '@nuxtjs/tailwindcss', '@nuxtjs/color-mode', 'nuxt-icon'],
   app: {
     head: {
-      title: "Hudia - At Hudia, we specialize in helping businesses establish a strong foothold in Africa, particularly in Nigeria. Our comprehensive services ensure that you navigate the complexities of the business landscape with confidence.",
+      title: "Storipod | Largest Crypto native Creator Economy Ecosystem.",
       htmlAttrs: { lang: "en" },
       meta: [
         { charset: "utf-8" },

@@ -23,7 +23,12 @@ type NuxtAppInjections =
   InjectionType<typeof import("../../node_modules/@nuxtjs/color-mode/dist/runtime/plugin.client.js")> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/dev-server-logs.js")> &
   InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/warn.dev.server.js")> &
-  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-if-layout-used.js")>
+  InjectionType<typeof import("../../node_modules/nuxt/dist/app/plugins/check-if-layout-used.js")> &
+  InjectionType<typeof import("../../plugins/aos.js")> &
+  InjectionType<typeof import("../../plugins/google-analytics.js")> &
+  InjectionType<typeof import("../../plugins/googleTagManager.js")> &
+  InjectionType<typeof import("../../plugins/scrollRevealJs.js")> &
+  InjectionType<typeof import("../../plugins/vue-google-analytics.js")>
 
 declare module '#app' {
   interface NuxtApp extends NuxtAppInjections { }

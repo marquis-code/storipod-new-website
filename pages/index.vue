@@ -1,11 +1,11 @@
 <template>
   <div class="min-h-screen bg-white dark:bg-black text-gray-900 dark:text-gray-100">
     <!-- Navigation -->
-    <header class="sticky top-0 backdrop-blur-md bg-white/85 dark:bg-gray-900/85 border-b border-gray-200/30 dark:border-gray-700/30 z-50">
+     <GlassyHeader />
+    <!-- <header class="sticky top-0 backdrop-blur-md bg-white/85 dark:bg-whte border-b border-gray-200/30 dark:border-gray-700/30 z-50">
       <div class="max-w-7xl mx-auto px-5 flex items-center justify-between h-16">
         <NuxtLink to="/" class="flex items-center gap-2 font-extrabold text-xl">
-          <div class="w-3 h-3 rounded bg-gradient-to-br from-blue-500 to-green-500"></div>
-          <span>Storipod</span>
+          <img src="@/assets/img/storipodLogo.svg" />
         </NuxtLink>
         
         <nav class="hidden md:flex items-center gap-6">
@@ -14,10 +14,9 @@
           <NuxtLink to="#advertisers" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold transition-colors">Advertisers</NuxtLink>
           <NuxtLink to="#business" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold transition-colors">Business Tools</NuxtLink>
           <NuxtLink to="#faq" class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold transition-colors">FAQ</NuxtLink>
-          <NuxtLink to="#download" class="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-all hover:shadow-lg hover:-translate-y-0.5">Get the app</NuxtLink>
+          <NuxtLink to="#download" class="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold bg-storipod-primary text-white hover:bg-storipod-primary transition-all hover:shadow-lg hover:-translate-y-0.5">Get the app</NuxtLink>
         </nav>
 
-        <!-- Mobile menu button -->
         <button 
           @click="toggleMobileMenu"
           class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -26,7 +25,6 @@
         </button>
       </div>
 
-      <!-- Mobile menu -->
       <div v-if="isMobileMenuOpen" class="md:hidden border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
         <nav class="px-5 py-4 space-y-3">
           <NuxtLink to="#features" @click="toggleMobileMenu" class="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold py-2">Features</NuxtLink>
@@ -34,14 +32,18 @@
           <NuxtLink to="#advertisers" @click="toggleMobileMenu" class="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold py-2">Advertisers</NuxtLink>
           <NuxtLink to="#business" @click="toggleMobileMenu" class="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold py-2">Business Tools</NuxtLink>
           <NuxtLink to="#faq" @click="toggleMobileMenu" class="block text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 font-semibold py-2">FAQ</NuxtLink>
-          <NuxtLink to="#download" @click="toggleMobileMenu" class="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-all mt-4">Get the app</NuxtLink>
+          <NuxtLink to="#download" @click="toggleMobileMenu" class="inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold bg-storipod-primary text-white hover:bg-storipod-primary transition-all mt-4">Get the app</NuxtLink>
         </nav>
       </div>
-    </header>
+    </header> -->
+
+
+
 
     <!-- Hero Section -->
-    <section class="max-w-7xl mx-auto px-5 py-16 md:py-24">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
+     <HeroSection />
+    <!-- <section class="max-w-7xl mx-auto px-5 py-16 md:py-24">
+      <div class="grid lg:order-1 order-2 md:grid-cols-2 gap-12 items-center">
         <div class="space-y-6">
           <span class="inline-flex items-center px-3 py-2 rounded-full text-sm font-semibold bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">New</span>
           
@@ -54,7 +56,7 @@
           </p>
           
           <div class="flex flex-wrap gap-4">
-            <NuxtLink to="#download" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
+            <NuxtLink to="#download" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-storipod-primary text-white hover:bg-storipod-primary transition-all hover:shadow-lg hover:-translate-y-0.5">
               Download app
             </NuxtLink>
             <NuxtLink to="#creators" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
@@ -78,23 +80,15 @@
           </div>
         </div>
         
-        <div class="relative">
-          <div class="bg-gradient-to-b from-gray-50/60 dark:from-gray-800/60 to-transparent rounded-3xl p-4 shadow-2xl border border-gray-200/50 dark:border-gray-700/50">
-            <div class="bg-gradient-to-b from-gray-900 to-gray-800 rounded-[22px] border border-gray-700/50 overflow-hidden" style="aspect-ratio: 9/19;">
-              <div class="h-12 flex items-center justify-center text-gray-300 text-sm border-b border-gray-700/30">
-                Your Feed
-              </div>
-              <div class="p-3 space-y-3 max-h-[540px] overflow-auto">
-                <div v-for="item in feedItems" :key="item.id" class="bg-white/5 border border-gray-600/30 rounded-xl p-4">
-                  <h4 class="font-semibold text-white mb-2">{{ item.title }}</h4>
-                  <p class="text-gray-300 text-sm">{{ item.description }}</p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="relative lg:order-2 order-1">
+          <img src="@/assets/images/merged-hero.png" />
         </div>
       </div>
-    </section>
+    </section> -->
+
+    <DigitalAssetPlatform />
+    <AnimatedVideoGrid />
+    <ExchangeSection />
 
     <!-- Features Section -->
     <section id="features" class="py-16 bg-gray-50 dark:bg-gray-800/50">
@@ -126,7 +120,7 @@
               Sell subscriptions, accept tips, and run paid newsletters—no plugins, no code. Unlock analytics, promo codes, and instant payouts.
             </p>
             <div class="flex flex-wrap gap-4">
-              <NuxtLink to="#" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
+              <NuxtLink to="#" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-storipod-primary text-white hover:bg-storipod-primary transition-all hover:shadow-lg hover:-translate-y-0.5">
                 Start creating
               </NuxtLink>
               <NuxtLink to="#faq" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all">
@@ -153,7 +147,7 @@
           Reach thousands of engaged readers in a storytelling-first environment with native placements and creator partnerships.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <NuxtLink to="#" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-blue-500 text-white hover:bg-blue-600 transition-all hover:shadow-lg hover:-translate-y-0.5">
+          <NuxtLink to="#" class="inline-flex items-center gap-2 rounded-full px-6 py-3 font-semibold bg-storipod-primary text-white hover:bg-storipod-primary transition-all hover:shadow-lg hover:-translate-y-0.5">
             Start advertising
           </NuxtLink>
           <span class="inline-flex items-center px-3 py-2 rounded-full text-sm font-semibold bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">Business Suite</span>
@@ -179,9 +173,12 @@
         </div>
       </div>
     </section>
+    <div class="p-10">
+      <FooterComponent />
+    </div>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-16 bg-gray-50 dark:bg-gray-800/50">
+    <!-- <section id="faq" class="py-16 bg-gray-50 dark:bg-gray-800/50">
       <div class="max-w-4xl mx-auto px-5">
         <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">FAQ</h2>
         
@@ -203,10 +200,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Download Section -->
-    <section id="download" class="py-16">
+    <!-- <section id="download" class="py-16">
       <div class="max-w-7xl mx-auto px-5 text-center">
         <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Get the app</h2>
         <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">Available on iOS and Android.</p>
@@ -228,10 +225,10 @@
           </NuxtLink>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
-    <footer class="py-12 border-t border-gray-200 dark:border-gray-700">
+    <!-- <footer class="py-12 border-t border-gray-200 dark:border-gray-700">
       <div class="max-w-7xl mx-auto px-5">
         <div class="grid grid-cols-2 md:grid-cols-5 gap-8 mb-8">
           <div>
@@ -288,7 +285,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 

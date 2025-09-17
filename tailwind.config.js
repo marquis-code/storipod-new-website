@@ -68,6 +68,9 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        'storipod-primary': '#00A1C1',
+        facebookBlue: '#1877F2',
+        instagramPink: '#E1306C',
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
